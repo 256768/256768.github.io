@@ -98,7 +98,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Domů</a></li>
-                    <li><a href="landing.html">Galerie</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
                     <li><a href="oNas.html">O&nbsp;nás</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -182,7 +182,7 @@
                 <h2>Máte představu o vlastním autorském kusu?</h2>
                 <p class="category-text">Rádi s Vámi (doplnit)!!!</p>
                 <div class="category-gallery-grid">
-                    <div class="project-image"><img src="landing/14.png" alt="Předměty 1"></div>
+                    <div class="project-image"><img src="landing/14.jpg" alt="Předměty 1"></div>
                     <div class="project-image"><img src="landing/15.png" alt="Předměty 2"></div>
                 </div>
             </div>
@@ -195,13 +195,12 @@
         <div class="footer-content">
             <div class="footer-contacts">
                 <span><strong>Telefon: </strong>+420 603 484 428</span>
-                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz">o.skaroupka@centrum.cz</a></span>
+                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz?subject=Nezavazna poptavka">o.skaroupka@centrum.cz</a></span>
             </div>
             <div class="copyright">&copy; 2026 Kovotlačitelství Škaroupka</div>
         </div>
     </footer>
 
-    <!-- HTML tvého Lightboxu -->
     <div id="gallery-lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <span class="lightbox-arrow lightbox-prev">&#10094;</span>
@@ -211,11 +210,9 @@
         <span class="lightbox-arrow lightbox-next">&#10095;</span>
     </div>
 
-    <!-- Tvůj lightbox skript načteme na konci -->
     <script src="lightbox.js"></script>
 
     <script>
-        // Funkce pro rozbalení kategorií a restartování lightbox skriptu
         function toggleCategories() {
             var section = document.getElementById("vice");
             var btn = document.getElementById("reveal-btn");
@@ -224,14 +221,9 @@
             section.scrollIntoView({ behavior: 'smooth' });
             btn.style.display = "none";
 
-            // Protože tvůj lightbox.js se spustil hned při načtení a neviděl skryté obrázky,
-            // musíme po rozbalení donutit prohlížeč znovu načíst logiku z tvého lightbox.js
-            // To provedeme čistě tak, že znovu zavoláme kód, který tvůj lightbox.js provádí.
             reinitLightbox();
         }
 
-        // Tato funkce přesně replikuje tvůj lightbox.js, ale spustí se až ve chvíli,
-        // kdy jsou všechny obrázky (včetně rozbalených) viditelné.
         function reinitLightbox() {
             const images = Array.from(document.querySelectorAll('.project-image img'));
             const lightbox = document.getElementById('gallery-lightbox');
@@ -261,12 +253,10 @@
                 document.body.style.overflow = '';
             }
 
-            // Odstraníme případné staré eventy přepsáním klonu (čištění) a navážeme nové na všech 12+ obrázků
             images.forEach((img, index) => {
-                img.replaceWith(img.cloneNode(true)); // Vyčištění starých posluchačů
+                img.replaceWith(img.cloneNode(true));
             });
 
-            // Znovu vyhledáme vyčištěné obrázky a navážeme chování
             const freshImages = Array.from(document.querySelectorAll('.project-image img'));
             freshImages.forEach((img, index) => {
                 img.addEventListener('click', () => {
@@ -274,7 +264,6 @@
                 });
             });
 
-            // Přemapování akčních tlačítek
             prevBtn.replaceWith(prevBtn.cloneNode(true));
             nextBtn.replaceWith(nextBtn.cloneNode(true));
             closeBtn.replaceWith(closeBtn.cloneNode(true));
