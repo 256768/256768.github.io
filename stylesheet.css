@@ -158,7 +158,7 @@ h2 {
     padding: 25px;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-    border-left: 4px solid #4a5568;
+    border-left: 4px solid #b87333;
     text-align: left;
 }
 
@@ -181,12 +181,12 @@ h2 {
 
 .item p {
     font-size: 0.95rem;
-    color: #4a5568;
+    color: #b87445;
     font-weight: 400;
 }
 
-.grid-two .item { border-left: 4px solid #0056b3; }
-.grid-two .item h3 { color: #0056b3; }
+.grid-two .item { border-left: 4px solid #b87333; }
+.grid-two .item h3 { color: #b87333; }
 
 .button-group {
     width: 100%;
@@ -210,14 +210,14 @@ h2 {
     border: 2px solid transparent;
 }
 
-.btn-primary { background-color: #0056b3; color: #ffffff; }
-.btn-primary:hover { background-color: #004085; }
+.btn-primary { background-color: #b87333; color: black; }
+.btn-primary:hover { background-color: #a67445; }
 
-.btn-secondary { background-color: #4a5568; color: #ffffff; }
-.btn-secondary:hover { background-color: #2d3748; }
+.btn-secondary { background-color: #a67445; color:black; }
+.btn-secondary:hover { background-color: #b87333; }
 
-.btn-outline { background-color: transparent; border-color: #4a5568; color: #4a5568; }
-.btn-outline:hover { background-color: #4a5568; color: #ffffff; }
+.btn-outline { background-color: transparent; border-color: #b87333; color: #a67445; }
+.btn-outline:hover { background-color: #b87333; color: black; }
 
 .gallery-header {
     padding: 60px 20px 40px;
@@ -231,20 +231,20 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 0.8rem;
-    color: #0056b3;
+    color: #704e2f;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .gallery-header h1 {
-    /* OPRAVENO: Začíná bezpečně na 1.5rem, takže dlouhé slovo "Autoveteráni" neuteče z mobilu */
     font-size: clamp(1.5rem, 6vw, 3.8rem);
     margin-bottom: 15px;
 }
 
 .gallery-header .subtitle {
-    font-size: 1.1rem;
-    color: #4a5568;
+    font-family: 'Great Vibes', 'sans-serif';
+    font-size: 1.7rem;
+    color: #b87333;
     font-weight: 300;
     max-width: 600px;
     margin: 0 auto;
@@ -290,7 +290,7 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: #0056b3;
+    color: #704e2f;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -304,7 +304,7 @@ h2 {
 
 .project-info p {
     font-size: 0.95rem;
-    color: #4a5568;
+    color: black;
     margin-bottom: 25px;
     font-weight: 300;
 }
@@ -313,7 +313,7 @@ h2 {
     align-self: flex-start;
     color: #1a1c23;
     font-weight: 600;
-    border-bottom: 2px solid #0056b3;
+    border-bottom: 2px solid #b87333;
     padding-bottom: 2px;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -321,9 +321,9 @@ h2 {
 
 footer {
     background-color: #1a1c23;
-    color: #a0aec0;
+    color: #a67445;
     padding: 35px 20px;
-    border-top: 4px solid #0056b3;
+    border-top: 4px solid #b87333;
 }
 
 .footer-content {
@@ -343,7 +343,7 @@ footer {
 
 .footer-contacts span { font-size: 0.95rem; display: block; }
 .footer-contacts strong { color: #ffffff; }
-.copyright { font-size: 0.85rem; color: #718096; }
+.copyright { font-size: 0.85rem; color: #ffffff; }
 
 /* STYLY PRO POČÍTAČE A TABLETY (Desktop) */
 @media (min-width: 768px) {
@@ -365,7 +365,7 @@ footer {
 
     nav ul { display: flex; gap: 30px; padding: 0; }
     nav a { padding: 5px 0; border-bottom: none; font-size: 0.95rem; }
-    nav a:hover { color: #0056b3; }
+    nav a:hover { color: #b87333; }
 
     .container { padding: 60px 20px; }
     h1 { font-size: 3rem; margin-bottom: 50px; }
@@ -476,7 +476,7 @@ b {
     cursor: pointer;
     transition: color 0.2s;
 }
-.lightbox-close:hover { color: #0056b3; }
+.lightbox-close:hover { color: #b87445; }
 
 .lightbox-arrow {
     position: absolute;

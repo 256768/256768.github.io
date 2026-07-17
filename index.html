@@ -4,36 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domov | Kovotlačitelství Škaroupka</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link href="stylesheet.css" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yesteryear&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <style>
+        .background-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+        }
+        .bg-left { flex: 1; background: url('landing/2.jpg') center/cover; }
+        .bg-right { flex: 1; background: url('landing/1.png') center/cover; }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(200, 200, 200, 0.85);
+        }
+
+        body { color: #2b2d42; }
+        h3 { color: #1a1c20;   font-family: "Merienda";
+	  font-weight: 800;
+	  font-style: normal;
+	  font-size: 25pt;
+	}
+
+        .minimal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
+        .minimal-item { padding: 15px; border-left: 3px solid #b87333; background: rgba(255,255,255,0.5); }
+        .hero-subtitle { font-style: italic; font-size: 1.4rem; display: block; margin-bottom: 40px; }
+    </style>
 </head>
 <body>
+
+    <div class="background-wrapper">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+        <div class="overlay"></div>
+    </div>
 
     <header>
         <div class="nav-container">
             <div class="logo"><a href="index.html"><img src="landing/logo.png" width="10%"></a></div>
-
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
+            <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
             <nav>
                 <ul>
-                    <li><a href="index.html" style="color: #0056b3;">Domů</a></li>
+                    <li><a href="index.html" style="color: #b87333;">Domů</a></li>
                     <li><a href="galerie.html">Galerie</a></li>
                     <li><a href="oNas.html">O&nbsp;nás</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
@@ -42,57 +70,38 @@
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <h1>Kovotlačitelství Škaroupka</h1>
+        <span class="hero-subtitle">Preciznost, která je vidět na první pohled</span>
 
-        <div class="grid-four">
-            <div class="item">
-                <h3>Rodinná firma od r. 1991</h3>
-                <p>Stavíme na dlouholeté tradici, poctivém řemesle a osobním přístupu ke každému zákazníkovi.</p>
-            </div>
-            <div class="item">
-                <h3>Série i kusové zakázky</h3>
-                <p>Jsme flexibilní. Efektivně realizujeme jak velké sériové produkce, tak specifické kusové zakázky na míru.</p>
-            </div>
-            <div class="item">
-                <h3>Precizní ruční zpracování</h3>
-                <p>Spojujeme tradiční kovotlačitelské umění s vysokou přesností. Každý detail tvarujeme s maximální pečlivostí.</p>
-            </div>
-            <div class="item">
-                <h3>Průmysl a architekti</h3>
-                <p>Jsme spolehlivým partnerem pro průmyslové podniky i kreativní architekty a designéry hledající atypická řešení.</p>
-            </div>
+        <div class="minimal-grid">
+		<div class="minimal-item"><h3>Rodinná firma od r. 1991</h3></div>
+            <div class="minimal-item"><h3>Série i kusové zakázky</h3></div>
+            <div class="minimal-item"><h3>Precizní ruční zpracování</h3></div>
+            <div class="minimal-item"><h3>Průmysl a&nbsp;architekti</h3></div>
         </div>
 
-        <a href="mailto:o.skaroupka@centrum.cz?subject=Nezávazná poptávka&body=Dobry den,%0D%0A" class="btn btn-primary">Nezávazná poptávka</a>
-	<br>
+        <a href="kontakt.html" class="btn btn-primary" style="max-width: 300px; margin: 20px auto;">Nezávazná poptávka</a>
 
-        <div class="grid-two">
-            <div class="item">
-                <h3>Designová svítidla</h3>
-                <p>Vyrábíme precizní rotační komponenty pro moderní i retro osvětlení. Od stínítek po složité designové lustry z mosazi, mědi či hliníku.</p>
-            </div>
-            <div class="item">
-                <h3>Autoveteráni</h3>
-                <p>Nabízíme také zakázkovou výrobu a repliky chybějících či poškozených plechových dílů, světel a doplňků pro historická vozidla.</p>
-            </div>
+        <div class="minimal-grid" style="margin-top: 50px;">
+            <div class="minimal-item"><h3>Designová svítidla</h3></div>
+            <div class="minimal-item"><h3>Autoveteráni</h3></div>
         </div>
 
-        <h2>Preciznost, která je vidět na&nbsp;první pohled</h2>
-
-        <div class="button-group">
-            <a href="dokazemeVyrobit.html" class="btn btn-primary">Co vše dokážeme vyrobit</a>
+        <div class="button-group" style="margin-top: 50px;">
+            <a href="galerie.html" class="btn btn-secondary">Ukázka naší práce</a>
+            <a href="autorskaTvorba.html" class="btn btn-secondary">Autorská výroba</a>
+            <a href="dokazemeVyrobit.html" class="btn btn-secondary">Co vše dokážeme vyrobit</a>
             <a href="proKohoPracujeme.html" class="btn btn-secondary">Pro koho pracujeme</a>
-            <a href="autorskaTvorba.html" class="btn btn-outline">Autorská tvorba</a>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-contacts">
-                <span><strong>Telefon: </strong><a href="tel:+420603484428">+420&nbsp;603&nbsp;484&nbsp;428</a></span>
-                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz?subject=Nezavazna poptavka&body=Dobry den,%0D%0A" style="text-decoration:none; color:inherit;">o.skaroupka@centrum.cz</a></span>
-                <span><strong>Adresa: </strong> Rázusova 73, 614 00 Brno-Maloměřice</span>
+		    <span><strong>Telefon: </strong><a href="tel:+420603484428">+420&nbsp;603&nbsp;484&nbsp;428</a></span>
+                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz?subject=Nezavazna poptavka" style="text-decoration:none; color:inherit;">o.skaroupka@centrum.cz</a></span>
+		<span><strong>Adresa: </strong><a href="https://maps.app.goo.gl/ooPpPMCHQ52QiekB7">Rázusova 73, 614 00 Brno-Maloměřice</a></span>
             </div>
             <div class="copyright">
                 &copy; 2026 Kovotlačitelství Škaroupka<br>IČO: 75719843

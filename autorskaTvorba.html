@@ -6,32 +6,99 @@
     <title>Autorská tvorba | Kovotlačitelství Škaroupka</title>
 
     <link rel="stylesheet" href="stylesheet.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="lightbox.js"></script>
+
+    <style>
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .showcase-item {
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-image {
+            width: 100%;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .project-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .discover-section {
+            display: none;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .category-block {
+            margin-bottom: 60px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .category-block h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a1c23;
+        }
+        .category-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #4a4a4a;
+        }
+
+        .category-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .category-gallery-grid .project-image {
+            height: 180px;
+            padding: 0;
+            background: none;
+        }
+        .category-gallery-grid .project-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        .category-gallery-grid .project-image img:hover {
+            transform: scale(1.03);
+        }
+    </style>
 </head>
-<body class="gallery-page"> <header>
+<body class="gallery-page">
+
+    <header>
         <div class="nav-container">
             <div class="logo"><a href="index.html"><img src="landing/logo.png" width="10%"></a></div>
-
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
+            <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
             <nav>
                 <ul>
-                <ul>
                     <li><a href="index.html">Domů</a></li>
-                    <li><a href="galerie.html" style="color: #0056b3;">Galerie</a></li>
+                    <li><a href="landing.html">Galerie</a></li>
                     <li><a href="oNas.html">O&nbsp;nás</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -40,76 +107,193 @@
     </header>
 
     <div class="gallery-header">
-        <span class="gallery-pretitle"><a href="galerie.html">Galerie</a> / Autorská tvorba</span>
+        <span class="gallery-pretitle"><a href="landing.html">Galerie</a> / Autorská tvorba</span>
         <h1>Autorská tvorba</h1>
-        <p class="subtitle">Originální svítidla a solitérní objekty pro osobité interiéry i exteriéry.</p>
     </div>
 
-    <main class="container" style="margin-top: 0; padding-top: 0;">
+    <main class="container">
 
         <div class="grid-four">
+            <div class="itemp">
+                <div class="project-image">
+                    <img src="landing/2.jpg" alt="Svítidlo za krbem">
+                </div>
+            </div>
 
-            <article class="itemp" style="padding: 0; overflow: hidden;">
-                <div class="project-image" style="height: 300px;">
-                    <img src="landing/2.jpg" alt="Vysoká měď">
+            <div class="showcase-item">
+                <div class="project-image">
+                    <img src="landing/19.png" alt="Trojsvítidlo">
                 </div>
-                <div style="padding: 25px;">
-                    <h3>Mosazná stínidla "Vysoká měď"</h3>
-                    <a href="#" class="project-link">Poptat tento produkt</a>
-		</div>
-            </article>
-
-            <article class="itemp" style="padding: 0; overflow: hidden;">
-                <div class="project-image" style="height: 300px;">
-                    <img src="landing/19.png" alt="Hliníkové příruby">
+            </div>
+            <div class="showcase-item">
+                <div class="project-image">
+                    <img src="landing/20.png" alt="Trojsvítidlo">
                 </div>
-                <div style="padding: 25px;">
-                    <h3>Hliníkové ventilační příruby</h3>
-                    <a href="#" class="project-link">Poptat tento produkt</a>
-                </div>
-            </article>
-
-            <article class="itemp" style="padding: 0; overflow: hidden;">
-                <div class="project-image" style="height: 300px;">
-                    <img src="landing/20.png" alt="Ocelové kryty">
-                </div>
-                <div style="padding: 25px;">
-                    <h3>Ocelové kryty motorů</h3>
-                    <a href="#" class="project-link">Poptat tento produkt</a>
-                </div>
-            </article>
-
+            </div>
         </div>
 
-
-        <div class="button-group" style="margin-top: 40px;">
-            <a href="#kontakt" class="btn btn-primary">Nezávazná poptávka výroby</a>
-            <a href="galerie.html" class="btn btn-outline">Zpět do galerie</a>
+        <div class="button-group" style="margin-top: 40px; margin-bottom: 40px;">
+            <a href="kontakt.html" class="btn btn-primary">Nezávazná poptávka</a>
+            <button id="reveal-btn" class="btn btn-outline" onclick="toggleCategories()">OBJEVTE VÍCE...</button>
         </div>
+
+        <section id="vice" class="discover-section">
+
+            <div class="category-block">
+                <h2>Světlo v prostoru</h2>
+                <p class="category-text">Autorská svítidla navržená jako součást celku. Každý kus mění atmosféru místnosti či okolí Vašeho domu, ne jen osvětlení.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="landing/2.jpg" alt="Osvětlení 1"></div>
+                    <div class="project-image"><img src="landing/3.png" alt="Osvětlení 2"></div>
+                    <div class="project-image"><img src="landing/4.png" alt="Osvětlení 3"></div>
+                    <div class="project-image"><img src="landing/16.jpg" alt="Osvětlení 3"></div>
+                    <div class="project-image"><img src="landing/17.png" alt="Osvětlení 3"></div>
+                    <div class="project-image"><img src="landing/18.png" alt="Osvětlení 3"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Atmosféra interiéru</h2>
+                <p class="category-text">Prostor tvoříme jako harmonii materiálu, světla a ticha. Každý detail má své místo.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="landing/5.png" alt="Veterán doplňky 1"></div>
+                    <div class="project-image"><img src="landing/19.png" alt="Veterán doplňky 2"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Solitérní objekty</h2>
+                <p class="category-text">Autorské artefakty, které fungují samostatně i jako součást interiérové kompozice.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="landing/20.png" alt="Příruby"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Jemnost v detailu</h2>
+                <p class="category-text">Každý objekt je navržen tak, aby prostor nerušil, ale kultivoval.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="landing/21.png" alt="Architektura 3"></div>
+                </div>
+            </div>
+
+            <!-- KATEGORIE F -->
+            <div class="category-block">
+                <h2>Máte představu o vlastním autorském kusu?</h2>
+                <p class="category-text">Rádi s Vámi (doplnit)!!!</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="landing/14.png" alt="Předměty 1"></div>
+                    <div class="project-image"><img src="landing/15.png" alt="Předměty 2"></div>
+                </div>
+            </div>
+
+        </section>
 
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-contacts">
-                <span><strong>Telefon: </strong>+420&nbsp;603&nbsp;484&nbsp;428</span>
-                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz" style="text-decoration:none; color:inherit;">o.skaroupka@centrum.cz</a></span>
-                <span><strong>Adresa: </strong> Rázusova 73, 614 00 Brno-Maloměřice</span>
+                <span><strong>Telefon: </strong>+420 603 484 428</span>
+                <span><strong>E-mail: </strong><a href="mailto:o.skaroupka@centrum.cz">o.skaroupka@centrum.cz</a></span>
             </div>
-            <div class="copyright">
-                &copy; 2026 Kovotlačitelství Škaroupka<br>IČO: 75719843
-            </div>
+            <div class="copyright">&copy; 2026 Kovotlačitelství Škaroupka</div>
         </div>
     </footer>
 
-<div id="gallery-lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <span class="lightbox-arrow lightbox-prev">&#10094;</span>
-    <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="">
+    <!-- HTML tvého Lightboxu -->
+    <div id="gallery-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <span class="lightbox-arrow lightbox-next">&#10095;</span>
     </div>
-    <span class="lightbox-arrow lightbox-next">&#10095;</span>
-</div>
+
+    <!-- Tvůj lightbox skript načteme na konci -->
+    <script src="lightbox.js"></script>
+
+    <script>
+        // Funkce pro rozbalení kategorií a restartování lightbox skriptu
+        function toggleCategories() {
+            var section = document.getElementById("vice");
+            var btn = document.getElementById("reveal-btn");
+
+            section.style.display = "block";
+            section.scrollIntoView({ behavior: 'smooth' });
+            btn.style.display = "none";
+
+            // Protože tvůj lightbox.js se spustil hned při načtení a neviděl skryté obrázky,
+            // musíme po rozbalení donutit prohlížeč znovu načíst logiku z tvého lightbox.js
+            // To provedeme čistě tak, že znovu zavoláme kód, který tvůj lightbox.js provádí.
+            reinitLightbox();
+        }
+
+        // Tato funkce přesně replikuje tvůj lightbox.js, ale spustí se až ve chvíli,
+        // kdy jsou všechny obrázky (včetně rozbalených) viditelné.
+        function reinitLightbox() {
+            const images = Array.from(document.querySelectorAll('.project-image img'));
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+
+            let currentIndex = 0;
+
+            function showImage(index) {
+                if (index < 0) {
+                    currentIndex = images.length - 1;
+                } else if (index >= images.length) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+                lightboxImg.src = images[currentIndex].src;
+                lightboxImg.alt = images[currentIndex].alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Odstraníme případné staré eventy přepsáním klonu (čištění) a navážeme nové na všech 12+ obrázků
+            images.forEach((img, index) => {
+                img.replaceWith(img.cloneNode(true)); // Vyčištění starých posluchačů
+            });
+
+            // Znovu vyhledáme vyčištěné obrázky a navážeme chování
+            const freshImages = Array.from(document.querySelectorAll('.project-image img'));
+            freshImages.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    showImage(index);
+                });
+            });
+
+            // Přemapování akčních tlačítek
+            prevBtn.replaceWith(prevBtn.cloneNode(true));
+            nextBtn.replaceWith(nextBtn.cloneNode(true));
+            closeBtn.replaceWith(closeBtn.cloneNode(true));
+
+            const freshPrev = document.querySelector('.lightbox-prev');
+            const freshNext = document.querySelector('.lightbox-next');
+            const freshClose = document.querySelector('.lightbox-close');
+
+            freshPrev.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
+            freshNext.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
+            freshClose.addEventListener('click', closeLightbox);
+
+            lightbox.onclick = (e) => {
+                if (e.target !== lightboxImg && e.target !== freshPrev && e.target !== freshNext) {
+                    closeLightbox();
+                }
+            };
+        }
+    </script>
 
 </body>
 </html>
