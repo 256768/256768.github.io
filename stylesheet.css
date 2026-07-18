@@ -210,8 +210,8 @@ h2 {
     border: 2px solid transparent;
 }
 
-.btn-primary { background-color: #b87333; color: black; }
-.btn-primary:hover { background-color: #a67445; }
+.btn-primary { background-color: #D6D1CA; color: #242323; border-color:black; }
+.btn-primary:hover { background-color: #423F3E; color: #D6D1CA; }
 
 .btn-secondary { background-color: #a67445; color:black; }
 .btn-secondary:hover { background-color: #b87333; }
