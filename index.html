@@ -20,13 +20,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="robots" content="index, follow" />
-    <!-- Open Graph pro Hlavní stranu -->
+
 <meta property="og:title" content="Kovotlačitelství Škaroupka Brno" />
 <meta property="og:description" content="Precizní zpracování kovů pro průmysl i architekty. Vyrábíme svítidla, díly na veterány a sakrální předměty. Nemáte výkres? Nevadí, ozvěte se!" />
 <meta property="og:image" content="https://www.kovotlacitelstviskaroupka.cz/landing/1.png" />
 <meta property="og:url" content="https://www.kovotlacitelstviskaroupka.cz" />
 <meta property="og:type" content="website" />
-<!-- Twitter Card pro Hlavní stranu -->
+
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Kovotlačitelství Škaroupka Brno" />
 <meta name="twitter:description" content="Precizní zpracování kovů pro průmysl i architekty. Vyrábíme svítidla, díly na veterány a sakrální předměty. Nemáte výkres? Nevadí, ozvěte se!" />
@@ -41,18 +41,57 @@
             z-index: -1;
             display: flex;
         }
-        .bg-left { flex: 1; background: url('landing/2.png') center/cover; }
-        .bg-right { flex: 1; background: url('landing/1.png') center/cover; }
+
+	.bg-left, .bg-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-left {
+    left: 0;
+    width: 25%;
+    background-image: url('landing/2.png');
+    background-position: left center;
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.bg-right {
+    right: 0;
+    width: 75%;
+    background-image: url('landing/1.png');
+    background-position: right center;
+    -webkit-mask-image: linear-gradient(to left, black 90%, transparent 100%);
+    mask-image: linear-gradient(to left, black 90%, transparent 100%);
+}
+
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(200, 200, 200, 0.6);
+            background-color: rgba(200, 200, 200, 0);
         }
 
         body { color: #2b2d42; }
+
+	h1, .hero-subtitle {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+
         h3 { color: #1a1c20;   font-family: "Merienda";
 	  font-weight: 800;
 	  font-style: normal;
@@ -61,7 +100,7 @@
 
         .minimal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
         .minimal-item { padding: 15px; border-left: 3px solid #b87333; background: rgba(255,255,255,0.7); }
-        .hero-subtitle { font-style: italic; font-size: 1.5rem; display: block; margin-bottom: 40px; }
+        .hero-subtitle { font-style: italic; font-size: 1.9rem; display: block; margin-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -89,8 +128,8 @@
     </header>
 
     <main class="container">
-        <h1>Kovotlačitelství Škaroupka</h1>
-        <span class="hero-subtitle">Preciznost, která je vidět na první pohled</span>
+	    <h1><b>Kovotlačitelství Škaroupka</b></h1>
+	    <span class="hero-subtitle"><b>Preciznost, která je vidět na první pohled</b></span>
 
         <div class="minimal-grid">
 		<div class="minimal-item"><h3><i>Rodinná firma od&nbsp;r.&nbsp;1991</i></h3></div>

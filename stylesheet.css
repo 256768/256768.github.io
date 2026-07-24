@@ -14,7 +14,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     -webkit-text-size-adjust: 100%;
-    overflow-wrap: break-word; /* Ochrana proti přetečení dlouhých slov na celém webu */
+    overflow-wrap: break-word;
+    background-color: #6e6e6e;
 }
 
 a {
@@ -23,7 +24,7 @@ a {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #1a1c23;
     border-bottom: 1px solid #e0e0e0;
     padding: 15px 20px;
     position: relative;
@@ -52,7 +53,6 @@ header {
     z-index: 10;
 }
 
-/* Zajištění správné velikosti responzivního loga */
 .logo img {
     display: block;
     height: 40px;
@@ -70,11 +70,12 @@ header {
     z-index: 10;
 }
 
+/* Bílá ikona menu */
 .menu-icon span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #1a1c23;
+    background-color: #ffffff;
     margin: 5px 0;
     transition: 0.3s ease;
 }
@@ -97,6 +98,7 @@ nav ul {
     padding: 10px 0;
 }
 
+/* Barva textu v navigaci - mobilní verze */
 nav a {
     display: block;
     padding: 15px 20px;
@@ -105,6 +107,7 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #f4f5f7;
+    color: #000000;
 }
 
 #menu-toggle:checked ~ nav { max-height: 300px; }
@@ -125,7 +128,7 @@ h1, h2 {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.5px;
-    color: #1a1c23;
+    color: black;
 }
 
 h1 {
@@ -210,7 +213,7 @@ h2 {
     border: 2px solid transparent;
 }
 
-.btn-primary { background-color: #D6D1CA; color: #242323; border-color:black; }
+.btn-primary { background-color: #A8A39C; color: #242323; border-color:black; }
 .btn-primary:hover { background-color: #423F3E; color: #D6D1CA; }
 
 .btn-secondary { background-color: #a67445; color:black; }
@@ -218,6 +221,14 @@ h2 {
 
 .btn-outline { background-color: transparent; border-color: #b87333; color: #a67445; }
 .btn-outline:hover { background-color: #b87333; color: black; }
+
+.btnR {
+	align-items: flex-start;
+}
+
+.btnL {
+	align-items: flex-end;
+}
 
 .gallery-header {
     padding: 60px 20px 40px;
@@ -231,7 +242,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 0.8rem;
-    color: #704e2f;
+    color: #f4edb0;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -244,7 +255,7 @@ h2 {
 .gallery-header .subtitle {
     font-family: 'Great Vibes', 'sans-serif';
     font-size: 1.7rem;
-    color: #b87333;
+    color: #fff;
     font-weight: 300;
     max-width: 900px;
     margin: 0 auto;
@@ -255,6 +266,7 @@ h2 {
     flex-direction: column;
     background: #ffffff;
     margin-bottom: 4px;
+    background-color:#6e6e6e;
 }
 
 .project-image {
@@ -270,6 +282,8 @@ h2 {
     object-fit: cover;
     filter: grayscale(20%);
     transition: transform 0.8s ease, filter 0.5s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .project-block:hover .project-image img {
@@ -290,7 +304,7 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: #704e2f;
+    color: white;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -300,11 +314,12 @@ h2 {
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 15px;
+    color:#F4EBD0;
 }
 
 .project-info p {
     font-size: 1.2rem;
-    color: black;
+    color: #F4EDB0;
     margin-bottom: 25px;
     font-weight: 300;
 }
@@ -345,7 +360,6 @@ footer {
 .footer-contacts strong { color: #ffffff; }
 .copyright { font-size: 0.85rem; color: #ffffff; }
 
-/* STYLY PRO POČÍTAČE A TABLETY (Desktop) */
 @media (min-width: 768px) {
     header { padding: 20px 40px; }
     .menu-icon { display: none; }
@@ -364,7 +378,14 @@ footer {
     }
 
     nav ul { display: flex; gap: 30px; padding: 0; }
-    nav a { padding: 5px 0; border-bottom: none; font-size: 0.95rem; }
+
+    /* Barva textu v navigaci - PC verze (bílá) */
+    nav a {
+        padding: 5px 0;
+        border-bottom: none;
+        font-size: 0.95rem;
+        color: #ffffff;
+    }
     nav a:hover { color: #b87333; }
 
     .container { padding: 60px 20px; }
@@ -395,7 +416,7 @@ footer {
 
     .project-image {
         width: 100%;
-        height: 75vh; /* Vyčištěno a sjednoceno z původní duplicity */
+        height: 75vh;
         overflow: hidden;
         background-color: #e2e8f0;
 
@@ -409,7 +430,7 @@ footer {
     }
 
     .project-info {
-        flex: 0 0 30%;
+        flex: 0 0 40%;
         padding: 60px;
     }
 
@@ -427,11 +448,8 @@ footer {
     }
 }
 
-b {
-    color: #000;
-}
+b { color: #000; }
 
-/* STYLY PRO LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
@@ -446,9 +464,7 @@ b {
     user-select: none;
 }
 
-.lightbox.active {
-    display: flex;
-}
+.lightbox.active { display: flex; }
 
 .lightbox-content {
     max-width: 85%;
@@ -497,9 +513,7 @@ b {
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
 
-.project-image img {
-    cursor: zoom-in;
-}
+.project-image img { cursor: zoom-in; }
 
 @media (max-width: 768px) {
     .lightbox-arrow {
