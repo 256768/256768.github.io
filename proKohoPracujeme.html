@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro koho pracujeme? | Kovotlačitelství Škaroupka</title>
-
+    <title>Kontakt | Kovotlačitelství Škaroupka</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -14,8 +13,45 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-<body>
 
+<style>
+	h3 {
+	color:white;
+	}
+	p {
+	color:white;
+	}
+    .formspree-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 100%;
+    }
+    .formspree-form label {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .formspree-form input,
+    .formspree-form textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #444;
+        background-color: #222;
+        color: white;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 16px;
+    }
+    .formspree-form input:focus,
+    .formspree-form textarea:focus {
+        outline: none;
+        border-color: #b87333;
+    }
+</style>
+
+<body>
     <header>
         <div class="nav-container">
             <div class="logo"><a href="index.html"><img src="landing/logo.png" width="10%"></a></div>
@@ -42,22 +78,26 @@
         <div class="gallery-header">
         <span class="gallery-pretitle">Naši klienti</span>
         <h1>Pro koho pracujeme?</h1>
-        <p class="subtitle"><b>Průmysl, architekti, designéři, sakrální objekty, veteráni, výrobci svítidel, stavební klempíři, jednotlivci s originálními nápady...</b></p>
+        <p class="subtitle">Průmysl, architekti, designéři, sakrální objekty, veteráni, výrobci svítidel, stavební klempíři, jednotlivci s originálními nápady...</p>
     </div>
 
         <section class="project-block">
-            <div class="grid-two">
+            <div class="grid-two" style="margin: 0;">
                 <div class="project-image">
-                    <img src="landing/13.png" alt="Interiér">
+                    <img src="landing/13.png" alt="Trychtýře" width=200px>
+                </div>
+                <div style="line-height:1.9;font-size:20px;padding-top: 5px; padding-bottom: 0;">
+			<p>Možnosti výroby nejsou omezeny typem produktu. Rozhodující je tvar, funkce a Vaše představa.</p>
+			<p style="font-size: 1.5em;">Máte nápad na konkrétní produkt?</p>
+			<br>
+            <div class="button-group">
+            	<a href="mailto:o.skaroupka@centrum.cz?subject=Nezavazna poptavka" class="btn btn-primary">Nezávazná poptávka</a>
+		<br>
+            	<a href="galerie.html" class="btn btn-secondary">Zpět do galerie</a>
+            </div>
                 </div>
             </div>
         </section>
-    </div>
-
-    <p class="gallery-header subtitle"><b>Možnosti výroby nejsou omezeny typem produktu. Rozhodující je tvar, funkce a Vaše představa. Máte nápad na konkrétní produkt?</b></p>
-    <div class="button-group" style="margin-top: 40px;">
-        <a href="kontakt.html" class="btn btn-primary">Nezávazně poptat</a>
-        <a href="galerie.html" class="btn btn-outline">Zpět do galerie</a>
     </div>
 
     <footer>
@@ -73,5 +113,13 @@
         </div>
     </footer>
 
+<div id="gallery-lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    <span class="lightbox-arrow lightbox-next">&#10095;</span>
+</div>
 </body>
 </html>
