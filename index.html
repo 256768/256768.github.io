@@ -81,7 +81,7 @@
 
 	h1, .hero-subtitle {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 0px 3px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -99,8 +99,8 @@
 	}
 
         .minimal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
-        .minimal-item { padding: 15px; border-left: 3px solid #b87333; background: rgba(255,255,255,0.7); }
-        .hero-subtitle { font-style: italic; font-size: 1.9rem; display: block; margin-bottom: 40px; }
+        .minimal-item { padding: 10px; border-left: 3px solid #b87333; background: rgba(255,255,255,0.7); }
+        .hero-subtitle { font-style: italic; font-size: 1.9rem; margin-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -141,8 +141,10 @@
         <a href="kontakt.html" class="btn btn-primary" style="max-width: 300px; margin: 20px auto;">Nezávazná poptávka</a>
 
         <div class="minimal-grid" style="margin-top: 50px;">
-		<div class="minimal-item"><h3><i>Designová svítidla</i></h3></div>
-		<div class="minimal-item"><h3><i>Autoveteráni</i></h3></div>
+            <div class="minimal-item" style="visibility: hidden;"><h3>&nbsp;</h3></div>
+            <div class="minimal-item"><h3><i>Autoveteráni</i></h3></div>
+            <div class="minimal-item"><h3><i>Designová svítidla</i></h3></div>
+            <div class="minimal-item" style="visibility: hidden;"><h3>&nbsp;</h3></div>
         </div>
 
         <div class="button-group" style="margin-top: 50px;">
