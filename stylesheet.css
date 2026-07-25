@@ -219,7 +219,7 @@ h2 {
 .btn-secondary { background-color: #a67445; color:black; }
 .btn-secondary:hover { background-color: #b87333; }
 
-.btn-outline { background-color: transparent; border-color: #b87333; color: #a67445; }
+.btn-outline { background-color: #a67445; border-color: #b87333; color: black; }
 .btn-outline:hover { background-color: #b87333; color: black; }
 
 .btnR {
