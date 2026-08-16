@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Výběr všech obrázků v galerii a prvků lightboxu
     const images = Array.from(document.querySelectorAll('.project-image img'));
     const lightbox = document.getElementById('gallery-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -9,12 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
-    // Funkce pro otevření konkrétního obrázku podle indexu
     function showImage(index) {
         if (index < 0) {
-            currentIndex = images.length - 1; // Skoč na konec
+            currentIndex = images.length - 1; 
         } else if (index >= images.length) {
-            currentIndex = 0; // Skoč na začátek
+            currentIndex = 0;
         } else {
             currentIndex = index;
         }
@@ -22,35 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImg.src = images[currentIndex].src;
         lightboxImg.alt = images[currentIndex].alt;
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Zamezí scrollování na pozadí webu
+        document.body.style.overflow = 'hidden'; 
     }
 
-    // Funkce pro zavření lightboxu
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = ''; // Vrátí scrollování webu
+        document.body.style.overflow = ''; 
     }
 
-    // Kliknutí na jakýkoliv obrázek v galerii
     images.forEach((img, index) => {
         img.addEventListener('click', () => {
             showImage(index);
         });
     });
 
-    // Kliknutí na šipky a zavírací křížek
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
     closeBtn.addEventListener('click', closeLightbox);
 
-    // Zavření kliknutím kamkoliv mimo samotný obrázek
     lightbox.addEventListener('click', (e) => {
         if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) {
             closeLightbox();
         }
     });
 
-    // Podpora pro ovládání klávesnicí (šipky a Esc)
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
 
