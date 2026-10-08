@@ -5,7 +5,12 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # 2. Vynucení varianty BEZ www (pokud chcete mít web bez www)
+    # 2. Vynucení varianty BEZ www
     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
     RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+    # 3. Přesměrování z kořene domény na cs/index.html
+    RewriteCond %{REQUEST_URI} ^/$ [OR]
+    RewriteCond %{REQUEST_URI} ^/index\.(html|php)$ [NC]
+    RewriteRule ^$ /cs/index.html [L,R=301]
 </IfModule>
