@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designobjekte | Metalldrücken Škaroupka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .showcase-item {
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-image {
+            width: 100%;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .project-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .discover-section {
+            display: none;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .category-block {
+            margin-bottom: 60px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .category-block h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a1c23;
+        }
+        .category-text {
+            font-size: 1.28rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #4a4a4a;
+        }
+
+        .category-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .category-gallery-grid .project-image {
+            height: 400px;
+            padding: 0;
+            background: none;
+        }
+        .category-gallery-grid .project-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        .category-gallery-grid .project-image img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="gallery-page">
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html"><img src="../landing/logo.png" width="10%"></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="galerie.html">Unsere Arbeiten nach Branchen</a></li>
+                    <li><a href="oNas.html">Über&nbsp;uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="gallery-header">
+        <span class="gallery-pretitle"><a href="../landing.html">Galerie</a> / Designobjekte</span>
+        <h1>Designobjekte</h1>
+	<p class="subtitle">Originelle Leuchten und solitäre Objekte für charakterstarke Innen- und Außenbereiche.</p>
+    </div>
+
+    <main class="container">
+	<div class="grid-four">
+
+            <article class="itemp" style="padding: 0; overflow: hidden;">
+                <div class="project-image" style="height: 300px;">
+                    <img src="../galerie/1.jpg" alt="Messingleuchtenschirme">
+                </div>
+            </article>
+
+            <article class="itemp" style="padding: 0; overflow: hidden;">
+                <div class="project-image" style="height: 300px;">
+                    <img src="../landing/19.png" alt="Kupferlampen">
+                </div>
+            </article>
+
+            <article class="itemp" style="padding: 0; overflow: hidden;">
+                <div class="project-image" style="height: 300px;">
+                    <img src="../landing/20.png" alt="Aluminiumschalen">
+                </div>
+            </article>
+	</div>
+
+        <div class="button-group" style="margin-top: 40px; margin-bottom: 40px;">
+            <a href="kontakt.html" class="btn btn-primary">Unverbindliche Anfrage</a>
+            <button id="reveal-btn" class="btn btn-secondary" onclick="toggleCategories()">MEHR ENTDECKEN...</button>
+        </div>
+
+        <section id="vice" class="discover-section">
+
+            <div class="category-block">
+                <h2>Licht im Raum</h2>
+                <p class="category-text">Exklusive Leuchten, entworfen als harmonischer Teil des Gesamten. Jedes Stück verändert die Atmosphäre des Raumes oder Ihrer Umgebung – weit mehr als nur Beleuchtung.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="../galerie/1.jpg" alt="Beleuchtung 1"></div>
+                    <div class="project-image"><img src="../landing/3.png" alt="Beleuchtung 2"></div>
+                    <div class="project-image"><img src="../landing/4.png" alt="Beleuchtung 3"></div>
+                    <div class="project-image"><img src="../landing/16.jpg" alt="Beleuchtung 4"></div>
+                    <div class="project-image"><img src="../landing/17.png" alt="Beleuchtung 5"></div>
+                    <div class="project-image"><img src="../landing/18.png" alt="Beleuchtung 6"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Raumatmosphäre</h2>
+                <p class="category-text">Wir gestalten Räume als Harmonie aus Material, Licht und Stille. Jedes Detail hat seinen Platz.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="../galerie/8P5.png" alt="Oldtimer-Zubehör 1"></div>
+                    <div class="project-image"><img src="../landing/19.png" alt="Oldtimer-Zubehör 2"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Solitäre Objekte</h2>
+                <p class="category-text">Eigenständige Artefakte, die sowohl für sich allein wirken als auch als Teil einer Gesamtkomposition im Raum.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="../landing/20.png" alt="Flansche"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Subtilität im Detail</h2>
+                <p class="category-text">Jedes Objekt ist so konzipiert, dass es den Raum nicht dominiert, sondern kultiviert.</p>
+                <div class="category-gallery-grid">
+                    <div class="project-image"><img src="../landing/21.png" alt="Architektur 3"></div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h2>Haben Sie eine Vorstellung von Ihrem eigenen Designstück?</h2>
+                <p class="category-text" style="font-size:1.5em;">Sehr gerne entwerfen wir mit Ihnen Ihr individuelles Unikat nach Maß.</p>
+            <div class="button-group btn">
+            	<a href="mailto:o.skaroupka@centrum.cz?subject=Unverbindliche%20Anfrage" class="btn btn-primary">Anfrage für ein Unikat</a>
+            </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contacts">
+		    <span><strong>Telefon: </strong><a href="tel:+420603484428">+420&nbsp;603&nbsp;484&nbsp;428</a></span>
+                <span><strong>E-Mail: </strong><a href="mailto:o.skaroupka@centrum.cz?subject=Unverbindliche%20Anfrage" style="text-decoration:none; color:inherit;">o.skaroupka@centrum.cz</a></span>
+		<span><strong>Adresse: </strong><a href="https://maps.app.goo.gl/ooPpPMCHQ52QiekB7">Rázusova 73, 614 00 Brno-Maloměřice, Tschechien</a></span>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/kovotlacitelstviskaroupka/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61593296434810" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 Metalldrücken Škaroupka<br>Ust-IdNr. / IČO: 75719843
+            </div>
+        </div>
+    </footer>
+
+    <div id="gallery-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <span class="lightbox-arrow lightbox-next">&#10095;</span>
+    </div>
+
+    <script src="lightbox.js"></script>
+
+    <script>
+        function toggleCategories() {
+            var section = document.getElementById("vice");
+            var btn = document.getElementById("reveal-btn");
+
+            section.style.display = "block";
+            section.scrollIntoView({ behavior: 'smooth' });
+            btn.style.display = "none";
+
+            reinitLightbox();
+        }
+
+        function reinitLightbox() {
+            const images = Array.from(document.querySelectorAll('.project-image img'));
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+
+            let currentIndex = 0;
+
+            function showImage(index) {
+                if (index < 0) {
+                    currentIndex = images.length - 1;
+                } else if (index >= images.length) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+                lightboxImg.src = images[currentIndex].src;
+                lightboxImg.alt = images[currentIndex].alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            images.forEach((img, index) => {
+                img.replaceWith(img.cloneNode(true));
+            });
+
+            const freshImages = Array.from(document.querySelectorAll('.project-image img'));
+            freshImages.forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    showImage(index);
+                });
+            });
+
+            prevBtn.replaceWith(prevBtn.cloneNode(true));
+            nextBtn.replaceWith(nextBtn.cloneNode(true));
+            closeBtn.replaceWith(closeBtn.cloneNode(true));
+
+            const freshPrev = document.querySelector('.lightbox-prev');
+            const freshNext = document.querySelector('.lightbox-next');
+            const freshClose = document.querySelector('.lightbox-close');
+
+            freshPrev.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
+            freshNext.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
+            freshClose.addEventListener('click', closeLightbox);
+
+            lightbox.onclick = (e) => {
+                if (e.target !== lightboxImg && e.target !== freshPrev && e.target !== freshNext) {
+                    closeLightbox();
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>
